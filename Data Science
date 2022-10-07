@@ -1,0 +1,28 @@
+city_name = " "
+pop_1927 = 	691000
+pop_1950 = 983000
+pop_2017 = 15029231
+pop_2000 = 8831800
+pop_change = pop_2017 - pop_1927
+percentage_gr = (pop_change / pop_1927) * 100
+annual_gr = percentage_gr/90
+
+print(annual_gr)
+def population_growth(year_one, year_two, population_one, population_two):
+
+  pop_change = population_one - population_two
+
+  percentage_gr = (pop_change / population_one) * 100
+  growth_rate = percentage_gr/ (year_two - year_one)
+  return growth_rate
+
+
+set_one = population_growth(2017,1927, pop_1927, pop_2017)
+
+set_two = population_growth(2000, 1950, pop_1950, pop_2000)
+print(set_one)
+print(set_two)
+
+report = "The population grew from " + str(pop_1927) + " to " + str(pop_2017) + ", with a growth rate of " + str(pop_change) + " and an annual % of " + str(annual_gr) + "."
+
+print(report)
